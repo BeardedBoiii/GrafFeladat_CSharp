@@ -12,6 +12,7 @@ namespace GrafFeladat_CSharp
         {
             var graf = new Graf(6);
 
+
             graf.Hozzaad(0, 1);
             graf.Hozzaad(1, 2);
             graf.Hozzaad(0, 2);
@@ -21,7 +22,20 @@ namespace GrafFeladat_CSharp
             graf.Hozzaad(2, 4);
 
             Console.WriteLine(graf);
+            Console.WriteLine("Szélesség Bejárasa 0. kezdőponttól");
+            graf.SzelessegiBejar(0);
+            Console.WriteLine("Mélyeségi Bejárasa 0. kezdőponttól");
+            graf.MelysegiBejar(0);
+            Console.WriteLine("Összefüggő-e a gráf: {0}", graf.osszefuggo());
+            var feszitofa = graf.FeszitoFa();
+            Console.WriteLine(feszitofa);
+
+
             Console.ReadLine();
+
+
         }
+
+
     }
 }
